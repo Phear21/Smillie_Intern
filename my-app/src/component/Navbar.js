@@ -1,6 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import logo from '../assets/logo.svg';
+import Companydropdown from './Companydropdown';
+import FeatureDropdown from './FeatureDropdown';
+
 export default function Navbar() {
+
+
   return (
     <div className='lg'>
         <nav className="hidden sm:block navbar navbar-expand-lg navbar-light bg-light">
@@ -11,12 +16,9 @@ export default function Navbar() {
               <img src={logo} alt="logo" className="w-24  mt-1 mr-10" />
               </div>
                
-                <a href='/' className='font-epilogue font-bold text-gray mx-5 hover:cursor-pointer'>
-                    Features
-                </a>
-                <a  href='/'  className='font-epilogue font-bold text-gray mx-5 hover:cursor-pointer'>
-                    Company
-                </a>
+                <FeatureDropdown/>
+
+                <Companydropdown/>
                 <a  href='/'  className='font-epilogue font-bold text-gray mx-5 hover:cursor-pointer'>
                     Career
                 </a>
