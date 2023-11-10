@@ -24,6 +24,9 @@ module.exports = {
         'normal': 500, // Epilogue 500
         'bold': 700, // Epilogue 700
       },
+      height: {
+        'vh': '70vh',
+      }
     },
   },
   plugins: [],
