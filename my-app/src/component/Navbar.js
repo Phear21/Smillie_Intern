@@ -5,6 +5,12 @@ import FeatureDropdown from './FeatureDropdown';
 
 export default function Navbar() {
 
+  const Tabbar = ({title,link}) => (
+    <a  href={link}  className='font-epilogue font-bold text-gray mx-5 hover:cursor-pointer hover:text-black'>
+          {title}
+    </a>
+  );
+
 
   return (
     <div className='lg'>
@@ -19,12 +25,8 @@ export default function Navbar() {
                 <FeatureDropdown/>
 
                 <Companydropdown/>
-                <a  href='/'  className='font-epilogue font-bold text-gray mx-5 hover:cursor-pointer'>
-                    Career
-                </a>
-                <a href='/'  className='font-epilogue font-bold text-gray mx-5 hover:cursor-pointer'>
-                    About
-                </a>  
+                <Tabbar title='Career'/>
+                <Tabbar title='About'/>
             </div>
             <div className='flex flex-row items-center p-4'>
               <button className='mx-10 font-epilogue font-bold text-gray hover:cursor-pointer' >Login</button>

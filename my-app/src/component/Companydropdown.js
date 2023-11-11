@@ -1,4 +1,11 @@
 import React,{useState} from 'react'
+import arrowdownicon from '../assets/icon-arrow-down.svg'
+import arrowupicon from '../assets/icon-arrow-up.svg'
+import calendaricon from '../assets/icon-calendar.svg'
+import todolisticon from '../assets/icon-todo.svg'
+import planingicon from '../assets/icon-planning.svg'
+import reminder from '../assets/icon-reminders.svg'
+
 
 export default function Companydropdown() {
     const [isDropdown, setDropdown] = useState(false);
@@ -6,42 +13,37 @@ export default function Companydropdown() {
     const toggleDropdown = () => {
       setDropdown(!isDropdown);
     };
+    
+    const Dropdown = ({title,link}) => (
+        <a href={link} className="flex text-gray w-[8.5vw] font-normal font-epilogue text-[15px] items-center justify-center relative hover:cursor-pointer hover:text-black hover:font-bold">
+        <div className="flex py-2 mr-auto ml-10">
+          {title}
+        </div>
+      </a>
+        );
   return (
     <div>
-         <a
-                  className="flex font-epilogue font-bold text-gray mx-5 hover:cursor-pointer"
+                <a
+                  className="flex font-epilogue font-bold items-center text-gray mx-5 hover:text-black hover:cursor-pointer"
                   onClick={toggleDropdown}
                   aria-expanded={isDropdown}
                   aria-haspopup="true"
                 >
                   Company
-                  <svg
-                    className="mt-1 mr-1 h-5 w-5 text-gray-400"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <img className='h-[8px] ml-2'  src={isDropdown ? arrowupicon : arrowdownicon}/>
                 </a>
 
                 {/* Dropdown Content */}
                 {isDropdown && (
-                  <div className="absolute  z-10 mt-4 shadow-2xl">
+                  <div className="absolute z-10 mt-4 shadow-2xl w-[7vw] ml-4  rounded-[10px]  flex flex-col items-center">
                     {/* Dropdown items go here */}
-                    <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-300">
-                      Todo List
-                    </a>
-                    <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-300">
-                      Calendar
-                    </a>
-                    <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-300">
-                     Reminder
-                    </a>
+
+                    <div className='my-2'>
+                         
+                    <Dropdown  title="History"  />
+                    <Dropdown  title="Our Team" />
+                    <Dropdown  title="blog" />
+                    </div>
                   </div>
                 )}
     </div>

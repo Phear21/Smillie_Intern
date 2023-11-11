@@ -16,7 +16,7 @@ export default function Home() {
           Get your team in sync, no matter your location.
           <br/>Streamline processes, create team rituals, and <br/>watch productivity soar.
         </p>
-        <button className='flex rounded-[18px] h-[10%] w-[200px] items-center justify-center h-[8vh] bg-black  justify-center text-white hover:bg-white hover:text-black '>
+        <button className='flex rounded-[18px] h-[10%] w-[200px] items-center justify-center h-[8vh] bg-black  justify-center text-white hover:bg-white hover:text-black hover:outline'>
           <p className='font-epilogue font-bold text-lg lg:text-[20px]   '>
             Learn more
           </p>
