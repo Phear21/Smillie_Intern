@@ -8,7 +8,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
     <div className="fixed">
 
     {isOpen && <div className="fixed inset-0 bg-black opacity-50" style={{ zIndex: 999 }}></div>}
-
+    {/*  // Fixed position to the right of the viewport */}
     <div className={`fixed inset-y-0 right-0 w-[60vw] bg-white w-8 h-full text-black p-4 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`} style={{ zIndex: 1000 }}>
 
         <div className='flex justify-end'>

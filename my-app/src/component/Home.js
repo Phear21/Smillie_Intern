@@ -44,6 +44,7 @@ export default function Home() {
             </div>
          </div>
         </div>
+        {/* Hidden this when the size of the screen is larger */}
       <div className='md:hidden'>
             <div className='flex  '>
               <img src={mobilehompic} className='w-full ' alt="Home " />

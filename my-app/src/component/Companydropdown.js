@@ -8,12 +8,14 @@ import reminder from '../assets/icon-reminders.svg'
 
 
 export default function Companydropdown() {
+    //function usestate to dropdown 
     const [isDropdown, setDropdown] = useState(false);
 
     const toggleDropdown = () => {
       setDropdown(!isDropdown);
     };
     
+    //Drop element Replica , in order to create similar element
     const Dropdown = ({title,link}) => (
         <a href={link} className="flex text-gray w-full md:w-[8.5vw] font-normal font-epilogue text-[15px] items-center justify-center relative hover:cursor-pointer hover:text-black hover:font-bold">
         <div className="flex py-2 mr-auto ml-10">
@@ -34,6 +36,7 @@ export default function Companydropdown() {
                 </a>
 
                 {/* Dropdown Content */}
+                {/* When the drop down is press show the rest stuff */}
                 {isDropdown && (
                     <div className="relative flex flex-col items-center  z-10  w-full md:w-[7vw] rounded-[0px] md:absolute md:shadow-2xl md:rounded-[10px] md:mt-4">
                     {/* Dropdown items go here */}
