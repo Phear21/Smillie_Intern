@@ -25,12 +25,16 @@ export default function Home() {
                 </p>
               </button>
             
-              <div className='flex justify-between   w-96 lg:w-[80%]  h-[30%] items-end'>
-                <img className='h-8 lg:h-[2.5vh] w-auto' src={databizlogo} alt="Databiz Logo" />
-                <img className='h-8 w-auto' src={audiophilelogo} alt="Audiophile Logo" />
-                <img className='h-8 lg:h-[2.5vh] w-auto' src={mettlogo} alt="Mett Logo" />
-                <img className='h-8 lg:h-[3vh] w-auto' src={makerlogo} alt="Maker Logo" />
+              <div className='flex justify-between  w-full lg:w-[80%] md:w-[100%] h-[30%] items-end'>
+                <div className='flex justify-between gap-10 items-center'>
+                <img className='h-[2.5vh]  max-w-[25%] md:w-auto lg:w-auto' src={databizlogo} alt="Databiz Logo" />
+                <img className='h-8 max-w-[25%] w-auto' src={audiophilelogo} alt="Audiophile Logo" />
+                <img className='h-[2.5vh]  lg:h-[2.5vh] max-w-[25%] w-auto' src={mettlogo} alt="Mett Logo" />
+                <img className='h-[3vh] lg:h-[3vh] max-w-[25%] w-auto' src={makerlogo} alt="Maker Logo" />
+                </div>
+              
               </div>
+
             </div>
 
             <div className='flex w-[full] flex-shrink-0 '>
