@@ -15,7 +15,7 @@ export default function FeatureDropdown() {
 
     // using the reuseable content for the dropdown 
     const Dropdown = ({iconimg,title,link}) => (
-    <a href={link} className="flex text-gray w-[8.5vw] font-normal text-[15px] items-center relative hover:cursor-pointer hover:text-black hover:font-bold">
+    <a href={link} className="flex text-gray  font-normal text-[15px] items-center relative hover:cursor-pointer hover:text-black hover:font-bold ">
       <div className="flex px-7 py-2">
         <img className='h-4 mr-2' src={iconimg} alt={`${title} Icon`} />
         {title}
@@ -25,6 +25,7 @@ export default function FeatureDropdown() {
     );
   return (
     <div>
+      <div className='hidden m:block '>
                 <a
                   className="flex font-epilogue font-bold items-center hover:text-black text-gray mx-5 hover:cursor-pointer"
                   onClick={toggleDropdown}
@@ -49,6 +50,36 @@ export default function FeatureDropdown() {
                  
                   </div>
                 )}
+      </div>
+      <div className='m:hidden'>
+      <a
+                  className="flex font-epilogue font-bold items-center hover:text-black text-gray mx-5 hover:cursor-pointer"
+                  onClick={toggleDropdown}
+                  aria-expanded={isDropdown}
+                  aria-haspopup="true"
+                >
+                  Features
+                  <img className='h-[8px] ml-2'  src={isDropdown ? arrowupicon : arrowdownicon}/>
+                </a>
+
+                {/* Dropdown Content */}
+                {isDropdown && (
+                  <div className="relative  z-10  flex flex-col items-center">
+                    {/* Dropdown items go here */}
+                    <div className='mt-1 w-[100%]'>
+                         
+                    <Dropdown iconimg={todolisticon} title="Todo List"  />
+                    <Dropdown iconimg={calendaricon} title="Calendar" />
+                    <Dropdown iconimg={reminder} title="Reminder" />
+                    <Dropdown iconimg={planingicon} title="Planning" />
+                    </div>
+                 
+                  </div>
+                )}
+
+      </div>
+
     </div>
+    
   )
 }
