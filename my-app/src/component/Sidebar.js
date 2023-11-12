@@ -17,7 +17,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
             </button>
         </div>
         <div className="flex flex-col justify-start">
-                <div className="flex flex-col justify-between gap-6">
+                <div className="flex flex-col justify-between gap-5">
                     <FeatureDropdown />
                     <Companydropdown />
                     <a href="/" className="font-epilogue font-bold text-left text-gray mx-5 hover:cursor-pointer hover:text-black">
@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
 
        
 
-            <div className='flex flex-col items-center p-4 mt-6'>
+            <div className='flex flex-col items-center p-4 mt-4'>
               <button className='mx-10 font-epilogue font-bold text-gray hover:cursor-pointer' >Login</button>
               <button className='font-epilogue font-bold text-gray rounded-md  mt-6 outline outline-3 outline-offset-4 w-full h-8 border-gray-500 text-base hover:cursor-pointer'>
                 Register
