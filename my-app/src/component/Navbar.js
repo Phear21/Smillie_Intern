@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <div >
-        <nav className="hidden m:block navbar navbar-expand-lg navbar-white bg-white">
+        <nav className="hidden md:block navbar navbar-expand-lg navbar-white bg-white">
         <div className='flex flex-row justify-between items-center mx-5 p-4'>
             
             <div className='flex flex-row items-center mr-5 p-4'>
@@ -53,7 +53,7 @@ export default function Navbar() {
        
         </nav>
 
-        <nav className="m:hidden navbar navbar-white bg-white">
+        <nav className="md:hidden navbar navbar-white bg-white">
         <div className='flex flex-row justify-between items-center p-4 mt-2'>
             
             <div className='flex flex-row items-center  p-2'>

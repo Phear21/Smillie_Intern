@@ -9,24 +9,26 @@ import mobilehompic from '../assets/image-hero-mobile.png'
 export default function Home() {
   return (
     <div>
-        <div className='hidden m:block'> 
+        <div className='hidden md:block'> 
           <div className='flex justify-center h-vh mx-10 mt-8'>
             <div className='flex flex-col items-left w-[50%] h-[100%] justify-center p-5 mr-[2vw] mt-[2vh]'>
-              <h1 className='text-left font-bold text-[60px] h-[40%] lg:text-[100px] mt-[6vh] leading-[100px]'>
+              <h1 className='text-left font-bold text-[60px] h-[40%] md:text-[80px] lg:text-[100px] lg: mt-[6vh] leading-[100px]'>
                 Make <br/>remote work
               </h1>
-              <p className='text-left my-10 h-[20%] font-normal text-[18px] lg:text-[18px] text-gray'>
+              <p className='text-left my-10 md:mb-4 h-[20%] font-normal text-[18px] md:my-20 lg:text-[18px] text-gray'>
                 Get your team in sync, no matter your location.
                 <br/>Streamline processes, create team rituals, and <br/>watch productivity soar.
               </p>
-              <button className='flex rounded-[18px] h-[10%] w-[200px] items-center justify-center h-[8vh] bg-black  justify-center text-white hover:bg-white hover:text-black hover:outline'>
-                <p className='font-epilogue font-bold text-lg lg:text-[20px]   '>
-                  Learn more
-                </p>
-              </button>
+              <div className='flex  my-4  items-start justify-start'>
+                    <button className=' rounded-[18px] bg-black h-[60px] w-[200px] justify-center text-white hover:bg-white hover:text-black hover:outline'>
+                      <p className='font-epilogue font-bold text-lg lg:text-[20px]   '>
+                        Learn more
+                      </p>
+                    </button>
+                  </div>
             
-              <div className='flex justify-between  w-full lg:w-[80%] md:w-[100%] h-[30%] items-end'>
-                <div className='flex justify-between gap-10 items-center'>
+              <div className='flex  w-full lg:w-[80%] md:w-[100%] h-[30%] items-end'>
+                <div className='flex  w-full  justify-between gap-4 items-center'>
                 <img className='h-[2.5vh]  max-w-[25%] md:w-auto lg:w-auto' src={databizlogo} alt="Databiz Logo" />
                 <img className='h-8 max-w-[25%] w-auto' src={audiophilelogo} alt="Audiophile Logo" />
                 <img className='h-[2.5vh]  lg:h-[2.5vh] max-w-[25%] w-auto' src={mettlogo} alt="Mett Logo" />
@@ -42,7 +44,7 @@ export default function Home() {
             </div>
          </div>
         </div>
-      <div className='m:hidden'>
+      <div className='md:hidden'>
             <div className='flex  '>
               <img src={mobilehompic} className='w-full ' alt="Home " />
             </div>

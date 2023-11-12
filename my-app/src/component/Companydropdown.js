@@ -15,7 +15,7 @@ export default function Companydropdown() {
     };
     
     const Dropdown = ({title,link}) => (
-        <a href={link} className="flex text-gray w-full m:w-[8.5vw] font-normal font-epilogue text-[15px] items-center justify-center relative hover:cursor-pointer hover:text-black hover:font-bold">
+        <a href={link} className="flex text-gray w-full md:w-[8.5vw] font-normal font-epilogue text-[15px] items-center justify-center relative hover:cursor-pointer hover:text-black hover:font-bold">
         <div className="flex py-2 mr-auto ml-10">
           {title}
         </div>
@@ -35,10 +35,10 @@ export default function Companydropdown() {
 
                 {/* Dropdown Content */}
                 {isDropdown && (
-                    <div className="relative flex flex-col items-center  z-10  w-full m:w-[7vw] rounded-[0px] m:absolute m:shadow-2xl m:rounded-[10px] m:mt-4">
+                    <div className="relative flex flex-col items-center  z-10  w-full md:w-[7vw] rounded-[0px] md:absolute md:shadow-2xl md:rounded-[10px] md:mt-4">
                     {/* Dropdown items go here */}
 
-                    <div className='my-2 w-full m:w-auto'>
+                    <div className='my-2 w-full md:w-auto'>
                          
                     <Dropdown  title="History"  />
                     <Dropdown  title="Our Team" />
