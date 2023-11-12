@@ -24,19 +24,23 @@ export default function Navbar() {
 
 
   return (
-    <div className='lg'>
+    <div >
         <nav className="hidden m:block navbar navbar-expand-lg navbar-white bg-white">
         <div className='flex flex-row justify-between items-center mx-5 p-4'>
             
             <div className='flex flex-row items-center mr-5 p-4'>
-              <div>
-              <img src={logo} alt="logo" className="w-24  mt-1 mr-10" />
+              <div className='mr-10'>
+              <img src={logo} alt="logo" className="  w-24   mt-1 " />
               </div>
-               
-                <FeatureDropdown/>
+
+              <div className='flex flex-row'>
+                 
+              <FeatureDropdown/>
                 <Companydropdown/>
                 <Tabbar title='Career'/>
                 <Tabbar title='About'/>
+              </div>
+              
             </div>
             <div className='flex flex-row items-center p-4'>
               <button className='mx-10 font-epilogue font-bold text-gray hover:cursor-pointer' >Login</button>
