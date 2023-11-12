@@ -25,7 +25,7 @@ export default function Home() {
                 </p>
               </button>
             
-              <div className='flex justify-between  w-96 lg:w-[80%]  h-[30%] items-end'>
+              <div className='flex justify-between   w-96 lg:w-[80%]  h-[30%] items-end'>
                 <img className='h-8 lg:h-[2.5vh] w-auto' src={databizlogo} alt="Databiz Logo" />
                 <img className='h-8 w-auto' src={audiophilelogo} alt="Audiophile Logo" />
                 <img className='h-8 lg:h-[2.5vh] w-auto' src={mettlogo} alt="Mett Logo" />
@@ -33,7 +33,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='flex w-[32%] '>
+            <div className='flex w-[full] flex-shrink-0 '>
               <img src={homepic} className='w-full h-[70vh]' alt="Home " />
             </div>
          </div>

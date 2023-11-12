@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className='flex flex-row justify-between items-center mx-5 p-4'>
             
             <div className='flex flex-row items-center mr-5 p-4'>
-              <div className='mr-10'>
+              <div className='mr-10 flex-shrink-0'>
               <img src={logo} alt="logo" className="  w-24   mt-1 " />
               </div>
 
