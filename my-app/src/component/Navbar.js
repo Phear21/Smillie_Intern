@@ -2,8 +2,19 @@ import React,{useState} from 'react'
 import logo from '../assets/logo.svg';
 import Companydropdown from './Companydropdown';
 import FeatureDropdown from './FeatureDropdown';
+import Sidebar from './Sidebar';
+import menu from '../assets/icon-menu.svg'
+import close from '../assets/icon-close-menu.svg'
 
 export default function Navbar() {
+
+  const [Sidebaropen, setSidebaropen] = useState(false);
+
+
+  const toggleSidebar = () => {
+    console.log("open")
+    setSidebaropen(!Sidebaropen)
+  }
 
   const Tabbar = ({title,link}) => (
     <a  href={link}  className='font-epilogue font-bold text-gray mx-5 hover:cursor-pointer hover:text-black'>
@@ -14,7 +25,7 @@ export default function Navbar() {
 
   return (
     <div className='lg'>
-        <nav className="hidden sm:block navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="hidden m:block navbar navbar-expand-lg navbar-white bg-white">
         <div className='flex flex-row justify-between items-center mx-5 p-4'>
             
             <div className='flex flex-row items-center mr-5 p-4'>
@@ -23,7 +34,6 @@ export default function Navbar() {
               </div>
                
                 <FeatureDropdown/>
-
                 <Companydropdown/>
                 <Tabbar title='Career'/>
                 <Tabbar title='About'/>
@@ -39,14 +49,19 @@ export default function Navbar() {
        
         </nav>
 
-        <nav className="sm:hidden navbar navbar-light bg-light">
-        <div className='flex flex-row justify-between items-center mx-5 p-4'>
+        <nav className="m:hidden navbar navbar-white bg-white">
+        <div className='flex flex-row justify-between items-center p-4 mt-2'>
             
-            <div className='flex flex-row items-center mr-5 p-4'>
-              <div>
-              <img src={logo} alt="logo" className="w-24  mt-1 mr-10" />
-              </div>
-          </div>
+            <div className='flex flex-row items-center  p-2'>
+              
+              <img src={logo} alt="logo" className="w-24  " />
+            
+            </div>
+            <div>
+              <img src={menu} onClick={toggleSidebar}/>
+              <Sidebar isOpen={Sidebaropen}  onToggle={toggleSidebar}/>
+            </div>
+
           </div>
         </nav>
 
